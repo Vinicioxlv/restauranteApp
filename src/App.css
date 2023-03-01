@@ -29,6 +29,45 @@ nav {
   justify-content: space-between;
   min-height: 90px;
 }
+.contenedor-dietas{
+  width: 1170px;
+  height: 250px;
+  margin: 10px 10px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 3px 13px 1px rgb(0 0 0 /9%);
+}
+
+.imagen-dietas{
+  height: 100%;
+  width: auto;
+
+}
+.contenedor-texto-dietas{
+  text-align: center;
+  padding:30px;
+  font-weight:400;
+  line-height: 1.5rem;
+
+}
+.nombre-dietas{
+  font-size: 1.3rem;
+  padding: 10px;
+}
+
+.nombre-dietas{
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
+
+.texto-dietas{
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
 .navbar-menu-container {
   display: none;
 }
