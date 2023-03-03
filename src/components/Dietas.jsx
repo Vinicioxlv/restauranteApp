@@ -14,7 +14,7 @@ function Testimonio(props){
     <div className='contenedor-dietas'>
       <img
         className='imagen-dietas'
-        src={imagePath}
+        src={Asiatica}
         alt='foto de emma'/>
       <div className='contenedor-texto-dietas'>
       <p className='nombre-dietas'>{props.nombre} </p>

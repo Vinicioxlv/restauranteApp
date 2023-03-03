@@ -54,6 +54,7 @@ function Inicio(){
                         Enviar
                     </Button>
                 </Form>
+                <br></br>
 
                 <Table striped bordered hover>
                             <thead>
