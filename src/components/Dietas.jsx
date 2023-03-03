@@ -5,7 +5,7 @@ import Asiatica from "../imagenes/dieta-asiatica.png"
 
 
 function Testimonio(props){
-  //const imagePath = `./imagenes/testimonio-${props.imagen}`
+  const imagePath = `./imagenes/testimonio-${props.imagen}.png`
   //src={require(`../imagenes/dieta-${props.imagen}.png`)}
   return(
     <div className="work-section-wrapper">
@@ -14,7 +14,7 @@ function Testimonio(props){
     <div className='contenedor-dietas'>
       <img
         className='imagen-dietas'
-        src={Asiatica}
+        src={imagePath}
         alt='foto de emma'/>
       <div className='contenedor-texto-dietas'>
       <p className='nombre-dietas'>{props.nombre} </p>
