@@ -1,10 +1,9 @@
-
 import "./App.css";
-import Home from "./Components/Home";
-import Work from "./Components/Work";
-import Testimonial from "./Components/Testimonial";
-import Contact from "./Components/Contact";
-import Footer from "./Components/Footer";
+import Home from "./components/Home";
+import Work from "./components/Work";
+import Testimonial from "./components/Testimonial";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import Dietas from "./components/Dietas.jsx";
 import {Route, Routes} from 'react-router-dom';
 import Inicio from './components/Inicio.jsx';
