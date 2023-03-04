@@ -1,6 +1,6 @@
 import React from 'react'
-import Emma from "../imagenes/testimonio-emma.png"
-import Asiatica from "../imagenes/dieta-asiatica.png"
+
+//import Asiatica from "../imagenes/dieta-asiatica.png"
 //import {createRequire} from "module";
 
 
@@ -9,12 +9,10 @@ function Testimonio(props){
   //src={require(`../imagenes/dieta-${props.imagen}.png`)}
   return(
     <div className="work-section-wrapper">
-  
-      <p className="primary-subheading">Dietas</p>
     <div className='contenedor-dietas'>
       <img
         className='imagen-dietas'
-        src={Asiatica}
+        src={props.imagen}
         alt='foto de emma'/>
       <div className='contenedor-texto-dietas'>
       <p className='nombre-dietas'>{props.nombre} </p>

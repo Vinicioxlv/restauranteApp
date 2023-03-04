@@ -46,10 +46,14 @@ const Navbar = () => {
   return (
     <nav>
       <div className="nav-logo-container">
+        <Link to ='/'>
         <img src={logo2} alt="" />
+        </Link>
       </div>
       <div className="navbar-links-container">
+        <Link to ='/'>
         <a href="">Home</a>
+        </Link>
         <a href="">Como trabajamos</a>
         <a href="">Testimonios</a>
         <a href="">Contactacto</a>
