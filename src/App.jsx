@@ -7,7 +7,6 @@ import Footer from "./components/Footer";
 import Dietas from "./components/Dietas.jsx";
 import {Route, Routes} from 'react-router-dom';
 import Inicio from './components/Inicio.jsx';
-import Sobre from './Sobre.jsx';
 import Asiatica from "./imagenes/dieta-asiatica.png"
 import Sanduche from "./imagenes/dieta-sanduche.png"
 

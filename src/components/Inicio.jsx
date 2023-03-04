@@ -3,14 +3,13 @@ import "../App.css";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { db } from "../firebase.js";
-import { collection, getDocs, addDoc, doc } from "firebase/firestore";
+import { collection, getDocs, addDoc, doc, deleteDoc, updateDoc } from "firebase/firestore";
 import { Form, Button } from 'react-bootstrap';
 import { Table } from 'react-bootstrap';
 
 
 function Inicio(){
-    // console.log(import.meta.env.VITE_BACKEND_HOLA)
-    // console.log(import.meta.env.DB_PASSWORD)
+    
      const [users,setuser]= useState([])
      const useCollectionRef= collection(db,'reservaciones')
       const [name, setName]= useState("")
@@ -21,12 +20,24 @@ function Inicio(){
        await addDoc(useCollectionRef, { nombre: name, correo: correo, mesa: mesa });
        getUsers() 
       }
+      
+      const deleteUser = async (id) => {
+        await deleteDoc(doc(db, "reservaciones", id));
+        getUsers();
+      };
+      
+      const updateUser = async (id, newData) => {
+        await updateDoc(doc(db, "reservaciones", id), newData);
+        getUsers();
+      };
 
      const getUsers = async() =>{
        const data = await getDocs(useCollectionRef)
        console.log(data)
       setuser(data.docs.map((doc) =>({...doc.data(), id: doc.id})))
      }
+
+   
 
      useEffect(()=>{
      getUsers();
@@ -62,6 +73,7 @@ function Inicio(){
                                 <th>Nombre</th>
                                 <th>Correo</th>
                                 <th>Mesa</th>
+                                <th>Acciones</th>
                                 </tr>
                             </thead>
                 <tbody>
@@ -71,6 +83,17 @@ function Inicio(){
                                 <td>{item.nombre}</td>
                                 <td>{item.correo}</td>
                                 <td>{item.mesa}</td>
+                                <td>
+                                    <Button variant="danger" onClick={() => deleteUser(item.id)}>
+                                        Eliminar
+                                    </Button>
+                                    <Button
+                                        variant="primary"
+                                        onClick={() => updateUser(item.id, { nombre: "Nuevo nombre" })}
+                                    >
+                                        Actualizar
+                                    </Button>
+                                </td>
                              </tr> 
                     
                         ))}
